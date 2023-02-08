@@ -1,0 +1,71 @@
+﻿
+@{
+}
+@model IEnumerable<GroceryProductProj.Models.GroceryProduct>
+
+@{
+    ViewData["Title"] = "Product";
+}
+<html>
+<style>
+   
+    marquee {
+        margin: auto;
+        font: 16px;
+        border: black 10px;
+        text-shadow: 1px 1px white;
+    }
+
+    th {
+        background-color: mistyrose;
+        text-shadow: 1px 1px lightblue;
+    }
+</style>
+<marquee scrolldelay="20" direction="right" loop="50" behaviour="alternate" bgcolor="gray" onmouseover="this.stop();" onmouseout="this.start();">
+    <h1><b><i>Product-DashBorad</i></b></h1>
+</marquee>
+
+
+<a asp-action="Login" class="btn btn-info" asp-controller="Login">LOGIN</a>
+<br />
+<BR />
+<table class="table" bgcolor="antiquewhite" width="100px" height="100px" border-spacing="4px" cellpadding="75" cellspacing="1" border="7px" >
+    <thead bgcolor="lightcoral">
+        <tr >
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQuantityKg)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                    </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                    <td>
+                    @Html.DisplayFor(modelItem => item.ProductQuantityKg)
+                    </td>
+
+                </tr>
+        }
+    </tbody>
+</table>
+</html>
