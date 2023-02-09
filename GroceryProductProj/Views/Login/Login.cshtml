@@ -15,24 +15,25 @@
     <span style="font-weight:bolder; font-size:20px; color:lightpink; align:center;">
         @ViewBag.Message
     </span>
-    <form>
+  <form>
 
         <style>
             .card {
                 background-color: antiquewhite;
-                border: 2px;
+                border: black 20px;
                 margin: auto;
                 font: 16px;
-                border: black 10px;
+                bg-color:gray;
                 text-shadow: 1px 1px white;
             }
-        </style>
+        </style>  
+
         <div class="card">
 
 
-            @* <form class="table" bgcolor="#ffcccc" width="100px" border-spacing="4px" border="20px">*@
+         
 
-            <marquee scrolldelay="20" direction="right" loop="50" behaviour="alternate" bgcolor="gray" onmouseover="this.stop();" onmouseout="this.start();">
+            <marquee scrolldelay="20" direction="right" loop="50" behaviour="alternate" bgcolor="lightgray" onmouseover="this.stop();" onmouseout="this.start();">
                 <h2 align="center"><b><i>User Login</i></b></h2>
             </marquee>
 
@@ -49,29 +50,27 @@
                 </div>
 
             </div>
+  <div class="row">
 
-            <div class="row">
+            <div class="form-group col-6 offset-3">
 
-                <div class="form-group col-6 offset-3">
+                <lable for="loginid"><b><i>Password</i></b></lable>
 
-                    <lable for="loginid"><b><i>Password</i></b></lable>
-
-                    @Html.PasswordFor(m => m.Pasword, new { @class = "form-control" })
-
-
-                </div>
+                @Html.PasswordFor(m => m.Pasword, new { @class = "form-control" })
+              
             </div>
-            <br />
-            <div class="row">
-                <div class="form-group col-12 offset-6">
-                    <input type="submit" value="Submit" id="btnsbm" style="height:50px; width:140px" />
-                </div>
-            </div>
-
         </div>
-        @* </form>*@
-    </form>
-}
+            <br />
+           <div class="row">
+            <div class="form-group col-12 offset-6">
+                        <input type="submit" value="Submit" id="btnsbm" style="height:50px; width:140px" />
+                </div>
+           </div>
+     
+        </div>
+     
+ </form>
+}  
 
 
 
