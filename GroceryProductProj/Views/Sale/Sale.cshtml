@@ -1,6 +1,4 @@
 ﻿@* For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860*@
-
-   
 @{
 }
 @model GroceryProductProj.Models.SalePage
@@ -8,12 +6,10 @@
 @{
 
     ViewBag.Title = "Receipt";
+   }
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-}
-
-@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-*@
-@using (Html.BeginForm("Sale", "Sale"))
+using (Html.BeginForm("Sale", "Sale"))
 
 {
   <span style="font-weight:bolder; font-size:16px; color:red;">@ViewBag.Message</span>
@@ -124,6 +120,7 @@
  </form>
 
 }
+
 <script>
   
        function OnClick() {
@@ -147,11 +144,11 @@
         return false;
       };
     function total() {
-         @* alert("jjj");*@
+         alert("jjj");
          
           var Rate= document.getElementById("Rate").value;
             var Quantity = document.getElementById("Quantity").value;
-            var Total=parseFloat(Rate)*parseFloat(Quantity);
+            var Total=parseFloat(Rate) *parseFloat(Quantity);
             document.getElementById("Total").value=Total;
       }
     </script>

@@ -2,7 +2,6 @@
 @{
 }
 @model IEnumerable<GroceryProductProj.Models.GroceryProduct>
-
 @{
     ViewData["Title"] = "Product";
 }
@@ -45,7 +44,7 @@
                 @Html.DisplayNameFor(model => model.ProductPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductQuantityKg)
+                @Html.DisplayNameFor(model => model.ProductQuantity)
             </th>
             <th></th>
         </tr>
@@ -64,7 +63,7 @@
                     @Html.DisplayFor(modelItem => item.ProductPrice)
                 </td>
                     <td>
-                    @Html.DisplayFor(modelItem => item.ProductQuantityKg)
+                    @Html.DisplayFor(modelItem => item.ProductQuantity)
                     </td>
 
                 </tr>

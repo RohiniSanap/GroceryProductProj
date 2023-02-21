@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout1.cshtml";
     }
-@*<h2 background-color="#ffcccc"><b><i>Index</i></b></h2>*@
+<h2 background-color="#ffcccc"><b><i>Index</i></b></h2>
 
 <marquee scrolldelay="20" direction="right" loop="50" behaviour="alternate" bgcolor="lightgray" onmouseover="this.stop();" onmouseout="this.start();">
     <h2 align="center"><b><i>Grocery Product</i></b></h2>
@@ -51,7 +51,7 @@
                 @Html.DisplayNameFor(model => model.ProductPrice)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductQuantityKg)
+                @Html.DisplayNameFor(model => model.ProductQuantity)
             </th>
             <th></th>
         </tr>
@@ -66,7 +66,7 @@
                 @Html.DisplayFor(modelItem => item.ProductPrice)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProductQuantityKg)
+                @Html.DisplayFor(modelItem => item.ProductQuantity)
             </td>
             <td>
                     <a asp-action="Edit" class="btn btn-warning"  asp-route-id="@item.ProductId">Edit</a> |

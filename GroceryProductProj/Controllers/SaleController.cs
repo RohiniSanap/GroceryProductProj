@@ -49,7 +49,7 @@ namespace GroceryProductProj.Controllers
             var productPrice = _db.GroceryProducts.Where(x => x.ProductId == ProductId).Select(x => x.ProductPrice).FirstOrDefault();
             return Json(productPrice);
         }
-        
-    
-}
+
+
+    }
 }

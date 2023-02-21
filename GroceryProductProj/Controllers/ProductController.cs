@@ -11,6 +11,7 @@ namespace GroceryProductProj.Controllers
         {
             _db = db;
         }
+
         [HttpGet]
         public IActionResult Product()
         {
@@ -23,7 +24,7 @@ namespace GroceryProductProj.Controllers
                     ProductId = item.ProductId,
                     ProductName = item.ProductName,
                     ProductPrice = item.ProductPrice,
-                    ProductQuantityKg = item.ProductQuantityKg,
+                    ProductQuantity = item.ProductQuantity,
                 };
                 products.Add(productClass);
 

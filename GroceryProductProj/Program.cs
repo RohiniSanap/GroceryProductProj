@@ -4,7 +4,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 //string connString = builder.Configuration.GetConnectionString("Connectionstr");

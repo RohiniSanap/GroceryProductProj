@@ -35,7 +35,7 @@ namespace GroceryProductProj.Controllers
                 ViewBag.Message = "Success full login";
 
 
-                HttpContext.Session.SetString("UserName",loginpage.UserName);
+                HttpContext.Session.SetString("UserName", loginpage.UserName);
 
                 return RedirectToAction("Index", "Edit");
 

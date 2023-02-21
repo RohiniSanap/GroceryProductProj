@@ -12,9 +12,5 @@ namespace GroceryProductProj.Models
         public int? Rate { get; set; }
         public int? Quantity { get; set; }
         public int? Total { get; set; }
-
-        public virtual List<GroceryProduct> Product { get; set; }
-
-       
     }
 }

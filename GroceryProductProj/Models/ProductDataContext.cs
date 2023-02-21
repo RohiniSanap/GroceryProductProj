@@ -34,7 +34,7 @@ namespace GroceryProductProj.Models
             modelBuilder.Entity<GroceryProduct>(entity =>
             {
                 entity.HasKey(e => e.ProductId)
-                    .HasName("PK__GroceryP__9834FB9A9EA1D5E8");
+                    .HasName("PK__GroceryP__9834FB9A11F2B081");
 
                 entity.ToTable("GroceryProduct");
 
@@ -49,7 +49,7 @@ namespace GroceryProductProj.Models
 
                 entity.Property(e => e.ProductPrice).HasColumnName("Product_Price");
 
-                entity.Property(e => e.ProductQuantityKg).HasColumnName("Product_Quantity_KG");
+                entity.Property(e => e.ProductQuantity).HasColumnName("Product_Quantity");
             });
 
             modelBuilder.Entity<LoginPage>(entity =>
@@ -87,11 +87,6 @@ namespace GroceryProductProj.Models
                     .HasColumnName("Cust_Name");
 
                 entity.Property(e => e.ProductId).HasColumnName("Product_ID");
-
-               /* entity.HasOne(d => d.Product)
-                    .WithMany(p => p.SalePages)
-                    .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__SalePage__Produc__300424B4");*/
             });
 
             OnModelCreatingPartial(modelBuilder);
